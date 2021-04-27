@@ -1,0 +1,11 @@
+@mixin S_button
+{
+    padding:10px;
+    border-radius: 45px;
+    border:none;
+    background:linear-gradient($color-secondary, $color-primary);
+    :hover
+    {
+        border:1px solid black;
+    }
+}
