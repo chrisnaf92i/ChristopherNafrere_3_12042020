@@ -1,36 +1,32 @@
 .sec-location
 {
-    background-color: silver;
-
+    background-color: whitesmoke;
+    display:flex;
+    flex-direction: column;
     &__info-name
     {
-        background-color: grey;
+        background-color: silver;
         text-align: center;
-        padding:15px;
-        margin:auto;
+        padding:9px;
     }
+
     h1
     {
-        margin:auto;
-        width:85%;
-        margin:15px;
-        margin-top:45px;
         text-align: center;
+        width:80%;
+        margin:auto;
+        margin:15px;
     }
-    
     p
     {
-        margin:auto;
-        width: 90%;
-
         text-align: center;
+        margin:auto;
+        width:95%;
     }
 
-    button
+    &__btn-explore
     {
-        @include S_button;
-        box-shadow: 1px 1px 8px black;
-        margin:25px 25%;
-        padding:15px;
+       @include S_button;
+       margin:24px auto;
     }
 }
