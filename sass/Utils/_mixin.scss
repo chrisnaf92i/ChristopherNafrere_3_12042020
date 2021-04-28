@@ -1,9 +1,15 @@
 @mixin S_button
 {
+    background:linear-gradient($color-secondary, $color-primary);
+
     padding:10px;
     border-radius: 45px;
     border:none;
-    background:linear-gradient($color-secondary, $color-primary);
+    width:200px;
+    color:white;
+    font-weight: bold;
+    margin:auto;
+
     :hover
     {
         border:1px solid black;
