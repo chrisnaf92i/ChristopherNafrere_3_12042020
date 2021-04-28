@@ -1,7 +1,13 @@
 @import "./Base/typography";
 @import "./Base/base";
+
 @import "./Utils/variables";
 @import "./Utils/mixin";
+@import "./Utils/functions";
+
 @import "./Layout/header";
+@import "./Layout/footer";
+
 @import "./Components/localisation";
+@import "./Components/fonctionnement";
 @import "./Components/restaurant";
