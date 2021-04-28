@@ -1,0 +1,44 @@
+.fonctionnement__explain-step
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding:15px;
+
+    margin:15px;
+
+    box-shadow: 1px 1px 3px black;
+    
+    border-radius: 45px;
+
+    .fas
+    {
+        margin:15px;
+    }
+
+    h2
+    {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .number-circle
+    {
+        position:absolute;
+        left:-12px;
+        background-color: $color-primary;
+        padding:5px 10px;
+        border-radius:100%;
+        font-weight: bold;
+        color:white;
+    }
+
+    &:hover
+    {
+        background-color: pastel($color-primary);
+        .fas
+        {
+            color:$color-primary;
+        }
+    }
+}

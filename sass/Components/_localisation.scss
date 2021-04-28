@@ -1,0 +1,36 @@
+.sec-location
+{
+    background-color: silver;
+
+    &__info-name
+    {
+        background-color: grey;
+        text-align: center;
+        padding:15px;
+        margin:auto;
+    }
+    h1
+    {
+        margin:auto;
+        width:85%;
+        margin:15px;
+        margin-top:45px;
+        text-align: center;
+    }
+    
+    p
+    {
+        margin:auto;
+        width: 90%;
+
+        text-align: center;
+    }
+
+    button
+    {
+        @include S_button;
+        box-shadow: 1px 1px 8px black;
+        margin:25px 25%;
+        padding:15px;
+    }
+}
