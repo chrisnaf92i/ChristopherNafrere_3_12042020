@@ -1,0 +1,94 @@
+.image-resto
+{
+    width: 100%;
+}
+
+
+.carte-restaurant
+{
+    background-color: whitesmoke;
+
+    border-radius: 45px 45px 0 0;
+    padding:15px;
+
+    .titre-catégorie
+    {
+        text-decoration:underline $color-terciar;
+        font-weight: normal;
+    }
+
+    h1
+    {
+        display: flex;
+        position: relative;
+        
+        font-family: 'Shrikhand', cursive;
+        font-style: italic;
+        font-weight: 300;
+        
+    
+        .fa-heart
+        {
+            position: absolute;
+            right:10px;
+        }
+    }
+
+    h2
+    {
+        text-transform: uppercase;
+    }
+
+    .btn-container
+    {
+        display:flex;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+
+    &__command
+    {
+        @include S_button;
+    }
+
+    &__plat
+    {
+        display:flex; 
+        align-items: flex-end;
+        position:relative;
+        background-color: white;
+
+        width:100%;
+
+        margin: 20px 0;
+        padding:5px;
+        
+        border:none;
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
+        
+        .prix
+        {
+            position:absolute;
+            right:15px;
+            font-weight: bold;
+        }
+
+        &__description
+        {
+            text-align: left;
+
+            h3
+            {
+                margin:0;
+                margin-top:5px;
+                margin-left:10px;
+            }   
+            p
+            {
+                margin:10px;
+            }
+        }
+    }
+    
+}

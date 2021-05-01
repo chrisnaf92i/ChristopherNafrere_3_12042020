@@ -2,10 +2,17 @@ header
 {
     display: flex;
     align-items: center;
+    background-color: white;
 }
 
 header img
 {
     width: 200px;
     margin:auto;
+}
+
+header a
+{
+    color:black;
+    margin-left:15px;
 }
