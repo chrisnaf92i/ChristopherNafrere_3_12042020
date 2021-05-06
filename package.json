@@ -4,7 +4,8 @@
   "description": "openclassrooms project 3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css",
+    "prefix":"postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/chrisnaf92i/ChristopherNafrere_3_12042020/issues"
   },
-  "homepage": "https://github.com/chrisnaf92i/ChristopherNafrere_3_12042020#readme"
+  "homepage": "https://github.com/chrisnaf92i/ChristopherNafrere_3_12042020#readme",
+  "browserlist":"last 4 versions"
 }
