@@ -1,6 +1,6 @@
 .all-restaurant
 {
-    background-color: rgb(240, 240, 240);
+    background-color: $color-light-grey;
     padding:15px;
     img
     {
@@ -31,6 +31,8 @@
         position: relative;
         width:95%;
         background-color: white;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
+
         a
         {
             color:black;
@@ -46,18 +48,29 @@
             h2
             {
                 padding:0;
-                margin:0;
+                margin:5px;
+                font-size: 18px;
             }
             p
             {
                 margin:5px;
             }
-            .fa-heart
+            .rate
             {
-                position: absolute;
-                right:20px;
-                color:black;
-                font-size: 22px;
+                position:absolute;
+                right:15px;
+
+                &:hover > .fill
+                {
+                    opacity: 1;
+                }
+
+                .fill
+                {
+                    color:$color-primary;
+                    opacity: 0;
+                    transition:500ms;
+                }
             }
         }
     }

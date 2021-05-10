@@ -11,6 +11,7 @@ header {
   display: flex;
   align-items: center;
   background-color: white;
+  margin-bottom: 15px;
 }
 
 header img {
@@ -24,7 +25,7 @@ header a {
 }
 
 footer {
-  background-color: black;
+  background-color: #353535;
   padding: 20px;
 }
 footer h2 {
@@ -38,12 +39,12 @@ footer p {
 }
 
 .sec-location {
-  background-color: whitesmoke;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
 }
 .sec-location__info-name {
-  background-color: silver;
+  background-color: #eaeaea;
   text-align: center;
   padding: 9px;
 }
@@ -77,13 +78,15 @@ footer p {
   display: flex;
   align-items: center;
   position: relative;
+  background-color: #f6f6f6;
   padding: 15px;
   margin: 15px;
-  box-shadow: 1px 1px 3px black;
-  border-radius: 45px;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 25px;
 }
 .fonctionnement__explain-step .fas {
   margin: 15px;
+  color: #353535;
 }
 .fonctionnement__explain-step h2 {
   font-size: 18px;
@@ -99,14 +102,14 @@ footer p {
   color: white;
 }
 .fonctionnement__explain-step:hover {
-  background-color: #e3ccff;
+  background-color: #eaeaea;
 }
 .fonctionnement__explain-step:hover .fas {
   color: #9356DC;
 }
 
 .all-restaurant {
-  background-color: #f0f0f0;
+  background-color: #f6f6f6;
   padding: 15px;
 }
 .all-restaurant img {
@@ -132,6 +135,7 @@ footer p {
   position: relative;
   width: 95%;
   background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
 }
 .all-restaurant__restaurant a {
   color: black;
@@ -145,26 +149,36 @@ footer p {
 }
 .all-restaurant__restaurant__description h2 {
   padding: 0;
-  margin: 0;
+  margin: 5px;
+  font-size: 18px;
 }
 .all-restaurant__restaurant__description p {
   margin: 5px;
 }
-.all-restaurant__restaurant__description .fa-heart {
+.all-restaurant__restaurant__description .rate {
   position: absolute;
-  right: 20px;
-  color: black;
-  font-size: 22px;
+  right: 15px;
+}
+.all-restaurant__restaurant__description .rate:hover > .fill {
+  opacity: 1;
+}
+.all-restaurant__restaurant__description .rate .fill {
+  color: #9356DC;
+  opacity: 0;
+  transition: 500ms;
 }
 
 .image-resto {
   width: 100%;
+  z-index: 0;
 }
 
 .carte-restaurant {
-  background-color: whitesmoke;
+  z-index: 5;
+  background-color: #f6f6f6;
   border-radius: 45px 45px 0 0;
   padding: 15px;
+  margin-top: -50px;
 }
 .carte-restaurant .titre-catégorie {
   text-decoration: underline #99E2D0;
@@ -205,30 +219,53 @@ footer p {
 .carte-restaurant__plat {
   display: flex;
   align-items: flex-end;
-  position: relative;
   background-color: white;
+  position: relative;
   width: 100%;
+  height: 75px;
   margin: 20px 0;
-  padding: 5px;
+  overflow: hidden;
   border: none;
   border-radius: 15px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
 }
-.carte-restaurant__plat .prix {
-  position: absolute;
-  right: 15px;
+.carte-restaurant__plat:hover .check-box > .check-box__spinner {
+  transform: rotate(360deg);
+}
+.carte-restaurant__plat__menu {
+  display: flex;
+  align-items: flex-end;
+}
+.carte-restaurant__plat__menu .prix {
   font-weight: bold;
 }
-.carte-restaurant__plat__description {
+.carte-restaurant__plat__menu__description {
   text-align: left;
 }
-.carte-restaurant__plat__description h3 {
+.carte-restaurant__plat__menu__description h3 {
   margin: 0;
   margin-top: 5px;
   margin-left: 10px;
 }
-.carte-restaurant__plat__description p {
+.carte-restaurant__plat__menu__description p {
   margin: 10px;
+}
+.carte-restaurant__plat .check-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 60px;
+  height: 80px;
+  transform: translateX(2);
+}
+.carte-restaurant__plat .check-box .check-box__spinner {
+  transition: transform 1s;
+  animation-timing-function: ease-in-out;
+}
+.carte-restaurant__plat .check-box .check-box__spinner .fas {
+  font-size: 20px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

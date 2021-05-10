@@ -3,18 +3,19 @@
     display: flex;
     align-items: center;
     position: relative;
-
+    background-color: $color-light-grey;
     padding:15px;
 
     margin:15px;
 
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 5px black;
     
-    border-radius: 45px;
+    border-radius: 25px;
 
     .fas
     {
         margin:15px;
+        color: $color-light-black;
     }
 
     h2
@@ -35,7 +36,7 @@
 
     &:hover
     {
-        background-color: pastel($color-primary);
+        background-color: $color-darken-grey;
         .fas
         {
             color:$color-primary;

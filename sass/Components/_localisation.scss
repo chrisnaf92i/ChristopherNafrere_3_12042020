@@ -1,11 +1,11 @@
 .sec-location
 {
-    background-color: whitesmoke;
+    background-color: $color-light-grey;
     display:flex;
     flex-direction: column;
     &__info-name
     {
-        background-color: silver;
+        background-color: $color-darken-grey;
         text-align: center;
         padding:9px;
     }
