@@ -71,9 +71,6 @@ footer p {
   margin: auto;
   margin: 24px auto;
 }
-.sec-location__btn-explore :hover {
-  border: 1px solid black;
-}
 
 .fonctionnement__explain-step {
   display: flex;
@@ -182,19 +179,19 @@ footer p {
 }
 
 .french {
-  background-image: url("public/images/restaurants/frenchTouch.jpg");
+  background-image: url("/public/images/restaurants/frenchTouch.jpg");
 }
 
 .delice {
-  background-image: url("public/images/restaurants/Delice.jpg");
+  background-image: url("/public/images/restaurants/Delice.jpg");
 }
 
 .palette {
-  background-image: url("public/images/restaurants/palette.jpg");
+  background-image: url("/public/images/restaurants/palette.jpg");
 }
 
 .la-note {
-  background-image: url("public/images/restaurants/LaNote.jpg");
+  background-image: url("/public/images/restaurants/LaNote.jpg");
 }
 
 .carte-restaurant {
@@ -205,7 +202,8 @@ footer p {
   margin-top: -50px;
 }
 .carte-restaurant .titre-catégorie {
-  text-decoration: underline #99E2D0;
+  width: 65px;
+  border-bottom: 3px solid #99E2D0;
   font-weight: normal;
 }
 .carte-restaurant h1 {
@@ -237,9 +235,6 @@ footer p {
   font-weight: bold;
   margin: auto;
 }
-.carte-restaurant__command :hover {
-  border: 1px solid black;
-}
 .carte-restaurant__plat {
   display: flex;
   align-items: flex-end;
@@ -254,6 +249,9 @@ footer p {
   border: none;
   border-radius: 15px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
+}
+.carte-restaurant__plat:hover .check-box {
+  opacity: 1;
 }
 .carte-restaurant__plat:hover .check-box > .check-box__spinner {
   transform: rotate(360deg);
@@ -283,7 +281,9 @@ footer p {
   background-color: #99E2D0;
   width: 60px;
   height: 80px;
-  transform: translateX(2);
+  transition: all 500ms;
+  transform: translateX(0);
+  opacity: 0;
 }
 .carte-restaurant__plat .check-box .check-box__spinner {
   transition: transform 1s;

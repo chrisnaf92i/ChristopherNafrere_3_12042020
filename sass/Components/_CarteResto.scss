@@ -14,22 +14,22 @@
 
 .french
 {
-    background-image: url("public/images/restaurants/frenchTouch.jpg");
+    background-image: url("/public/images/restaurants/frenchTouch.jpg");
 }
 
 .delice
 {
-   background-image: url("public/images/restaurants/Delice.jpg");
+   background-image: url("/public/images/restaurants/Delice.jpg");
 }
 
 .palette
 {
-    background-image: url("public/images/restaurants/palette.jpg");
+    background-image: url("/public/images/restaurants/palette.jpg");
 }
 
 .la-note
 {
-    background-image: url("public/images/restaurants/LaNote.jpg");
+    background-image: url("/public/images/restaurants/LaNote.jpg");
 }
 
 .carte-restaurant
@@ -46,7 +46,8 @@
     
     .titre-catégorie
     {
-        text-decoration:underline $color-terciar;
+        width:65px;
+        border-bottom: 3px solid $color-terciar;
         font-weight: normal;
     }
 
@@ -110,6 +111,7 @@
             
             & .check-box
             {
+                opacity: 1;
                 & > .check-box__spinner
                 {
                     transform:rotate(360deg);
@@ -154,7 +156,9 @@
             background-color: $color-terciar;
             width:60px;
             height:80px;
-            transform:translateX(2);
+            transition: all 500ms;
+            transform:translateX(0);
+            opacity: 0;
 
             .check-box__spinner
             {
