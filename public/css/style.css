@@ -206,9 +206,14 @@ footer p {
 
 .background-resto {
   width: 100%;
-  height: 250px;
+  height: 1500px;
   background-position: center;
   background-size: cover;
+}
+@media (max-width: 425px) {
+  .background-resto {
+    height: 250px;
+  }
 }
 
 .french {
@@ -232,7 +237,10 @@ footer p {
   background-color: #f6f6f6;
   border-radius: 45px 45px 0 0;
   padding: 15px;
-  margin-top: -50px;
+  width: 50%;
+  margin-top: -100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .carte-restaurant .titre-catégorie {
   width: 65px;
@@ -274,9 +282,9 @@ footer p {
   background-color: white;
   transform: translateY(1);
   opacity: 1;
-  width: 100%;
+  width: 80%;
   height: 75px;
-  margin: 20px 0;
+  margin: 20px auto;
   overflow: hidden;
   transition-duration: 500ms;
   opacity: 1s;
@@ -329,6 +337,15 @@ footer p {
 .carte-restaurant__plat .check-box .check-box__spinner .fas {
   font-size: 20px;
   color: white;
+}
+@media (max-width: 425px) {
+  .carte-restaurant {
+    width: 92%;
+    margin-top: -50px;
+  }
+  .carte-restaurant__plat {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
