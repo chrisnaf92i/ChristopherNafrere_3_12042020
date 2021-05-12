@@ -67,6 +67,11 @@
 
                 .fill
                 {
+                    position: absolute;
+                }
+
+                .fill
+                {
                     color:$color-primary;
                     opacity: 0;
                     transition:500ms;

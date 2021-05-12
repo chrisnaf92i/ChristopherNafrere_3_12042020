@@ -161,6 +161,9 @@ footer p {
   opacity: 1;
 }
 .all-restaurant__restaurant__description .rate .fill {
+  position: absolute;
+}
+.all-restaurant__restaurant__description .rate .fill {
   color: #9356DC;
   opacity: 0;
   transition: 500ms;
@@ -239,13 +242,14 @@ footer p {
   display: flex;
   align-items: flex-end;
   background-color: white;
-  position: relative;
-  color: black;
-  text-decoration: none;
+  transform: translateY(1);
+  opacity: 1;
   width: 100%;
   height: 75px;
   margin: 20px 0;
   overflow: hidden;
+  transition-duration: 500ms;
+  opacity: 1s;
   border: none;
   border-radius: 15px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
@@ -259,6 +263,9 @@ footer p {
 .carte-restaurant__plat__menu {
   display: flex;
   align-items: flex-end;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .carte-restaurant__plat__menu .prix {
   font-weight: bold;
