@@ -1,9 +1,17 @@
 .sec-location
 {
+    width:50%;
+    margin:auto;
     background-color: $color-light-grey;
     display:flex;
     flex-direction: column;
     margin-bottom: 50px;
+
+    @media(max-width:425px)
+    {
+        width:100%
+    }
+
     &__info-name
     {
         background-color: $color-darken-grey;
@@ -31,3 +39,5 @@
        margin:24px auto;
     }
 }
+
+

@@ -1,45 +1,65 @@
-.fonctionnement__explain-step
+.fonctionnement__step
 {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-color: $color-light-grey;
-    padding:15px;
+    display:flex;
+    justify-content: space-evenly;
 
-    margin:15px;
 
-    box-shadow: 1px 1px 5px black;
-    
-    border-radius: 25px;
 
-    .fas
+    &__explain
     {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: $color-light-grey;
+        padding:15px 50px;
+        width:80%;
+        margin:auto;
+
+
+
         margin:15px;
-        color: $color-light-black;
-    }
 
-    h2
-    {
-        font-size: 18px;
-        font-weight: 600;
-    }
-    .number-circle
-    {
-        position:absolute;
-        left:-12px;
-        background-color: $color-primary;
-        padding:5px 10px;
-        border-radius:100%;
-        font-weight: bold;
-        color:white;
-    }
+        box-shadow: 1px 1px 5px black;
+        
+        border-radius: 25px;
 
-    &:hover
-    {
-        background-color: $color-darken-grey;
         .fas
         {
-            color:$color-primary;
+            margin:15px;
+            color: $color-light-black;
+        }
+
+        h2
+        {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .number-circle
+        {
+            position:absolute;
+            left:-12px;
+            background-color: $color-primary;
+            padding:5px 10px;
+            border-radius:100%;
+            font-weight: bold;
+            color:white;
+        }
+
+        &:hover
+        {
+            background-color: $color-darken-grey;
+            .fas
+            {
+                color:$color-primary;
+            }
+        }
+    }
+    @media (max-width:425px) {
+        display: block;
+        .fonctionnement__step__explain
+        {
+            width: 85%;
+            padding: 15px;
         }
     }
 }

@@ -39,10 +39,17 @@ footer p {
 }
 
 .sec-location {
+  width: 50%;
+  margin: auto;
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+}
+@media (max-width: 425px) {
+  .sec-location {
+    width: 100%;
+  }
 }
 .sec-location__info-name {
   background-color: #eaeaea;
@@ -72,25 +79,31 @@ footer p {
   margin: 24px auto;
 }
 
-.fonctionnement__explain-step {
+.fonctionnement__step {
+  display: flex;
+  justify-content: space-evenly;
+}
+.fonctionnement__step__explain {
   display: flex;
   align-items: center;
   position: relative;
   background-color: #f6f6f6;
-  padding: 15px;
+  padding: 15px 50px;
+  width: 80%;
+  margin: auto;
   margin: 15px;
   box-shadow: 1px 1px 5px black;
   border-radius: 25px;
 }
-.fonctionnement__explain-step .fas {
+.fonctionnement__step__explain .fas {
   margin: 15px;
   color: #353535;
 }
-.fonctionnement__explain-step h2 {
+.fonctionnement__step__explain h2 {
   font-size: 18px;
   font-weight: 600;
 }
-.fonctionnement__explain-step .number-circle {
+.fonctionnement__step__explain .number-circle {
   position: absolute;
   left: -12px;
   background-color: #9356DC;
@@ -99,24 +112,35 @@ footer p {
   font-weight: bold;
   color: white;
 }
-.fonctionnement__explain-step:hover {
+.fonctionnement__step__explain:hover {
   background-color: #eaeaea;
 }
-.fonctionnement__explain-step:hover .fas {
+.fonctionnement__step__explain:hover .fas {
   color: #9356DC;
 }
+@media (max-width: 425px) {
+  .fonctionnement__step {
+    display: block;
+  }
+  .fonctionnement__step .fonctionnement__step__explain {
+    width: 85%;
+    padding: 15px;
+  }
+}
 
-.all-restaurant {
+.all-restaurant__list-resto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: #f6f6f6;
   padding: 15px;
 }
-.all-restaurant img {
+.all-restaurant__list-resto img {
   width: 100%;
-  height: 200px;
+  height: 500px;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.all-restaurant__new {
+.all-restaurant__list-resto__new {
   background-color: #99E2D0;
   color: #2c9c81;
   font-weight: bold;
@@ -127,7 +151,7 @@ footer p {
   right: 15px;
   top: 5px;
 }
-.all-restaurant__restaurant {
+.all-restaurant__list-resto__restaurant {
   margin: 15px auto;
   border-radius: 15px;
   position: relative;
@@ -135,38 +159,44 @@ footer p {
   background-color: white;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
 }
-.all-restaurant__restaurant a {
+.all-restaurant__list-resto__restaurant a {
   color: black;
   text-decoration: none;
 }
-.all-restaurant__restaurant__description {
+.all-restaurant__list-resto__restaurant__description {
   display: flex;
   align-items: center;
   padding: 5px;
   position: relative;
 }
-.all-restaurant__restaurant__description h2 {
+.all-restaurant__list-resto__restaurant__description h2 {
   padding: 0;
   margin: 5px;
   font-size: 18px;
 }
-.all-restaurant__restaurant__description p {
+.all-restaurant__list-resto__restaurant__description p {
   margin: 5px;
 }
-.all-restaurant__restaurant__description .rate {
+.all-restaurant__list-resto__restaurant__description .rate {
   position: absolute;
   right: 15px;
 }
-.all-restaurant__restaurant__description .rate:hover > .fill {
+.all-restaurant__list-resto__restaurant__description .rate:hover > .fill {
   opacity: 1;
 }
-.all-restaurant__restaurant__description .rate .fill {
+.all-restaurant__list-resto__restaurant__description .rate .fill {
   position: absolute;
-}
-.all-restaurant__restaurant__description .rate .fill {
   color: #9356DC;
   opacity: 0;
   transition: 500ms;
+}
+@media (max-width: 425px) {
+  .all-restaurant__list-resto {
+    display: block;
+  }
+  .all-restaurant__list-resto img {
+    height: 200px;
+  }
 }
 
 .image-resto {
