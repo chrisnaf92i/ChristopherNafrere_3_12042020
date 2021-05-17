@@ -7,6 +7,16 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+@keyframes apparition {
+  from {
+    opacity: 0;
+    margin-top: 5px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -280,8 +290,7 @@ footer p {
   display: flex;
   align-items: flex-end;
   background-color: white;
-  transform: translateY(1);
-  opacity: 1;
+  animation: apparition 1500ms ease-in-out;
   width: 80%;
   height: 75px;
   margin: 20px auto;
