@@ -131,10 +131,22 @@
             align-items: flex-end;
             white-space: nowrap;
             overflow: hidden;
+            width:100%;
             text-overflow: ellipsis;
+            position:relative;
+            &__description
+            {
+                width:90%;
+                border: 1px solid black;
+                text-overflow:ellipsis;
+
+            }
             .prix
             {
+                width:10%;
                 font-weight: bold;
+                position:absolute;
+                right:0;
             }
             &__description
             {
@@ -162,7 +174,7 @@
             align-items: center;
             justify-content: center;
             background-color: $color-terciar;
-            width:60px;
+            width:20%;
             height:80px;
             transition: all 500ms;
             transform:translateX(0);

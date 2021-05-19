@@ -61,25 +61,7 @@
                 {
                     margin:5px;
                 }
-                .rate
-                {
-                    position:absolute;
-                    right:15px;
-    
-                    &:hover > .fill
-                    {
-                        opacity: 1;
-                    }
-    
-                    .fill
-                    {
-                        position: absolute;
-    
-                        color:$color-primary;
-                        opacity: 0;
-                        transition:500ms;
-                    }
-                }
+                
             }
         }
         @media (max-width:425px)
@@ -90,5 +72,39 @@
                 height: 200px;
             }
         }
+    }
+}
+.rate
+{
+    position:absolute;
+    right:15px;
+
+    &:hover > .fill
+    {                        
+        opacity: 1;
+    }
+
+    &:hover > .line
+    {
+        opacity: 0;
+    }
+    .fill
+    {
+        position: absolute;
+
+        font-size: 25px;
+
+        color:$color-primary;
+        opacity: 0;
+        transition:500ms;
+    }
+
+    .line
+    {
+
+        font-size: 25px;
+        opacity: 1;
+        transition:500ms;
+
     }
 }

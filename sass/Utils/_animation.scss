@@ -11,3 +11,14 @@
         margin-top:0;
     }
 }
+
+@keyframes bars-spinner {
+    from
+    {
+        opacity: 1;
+    }
+    to
+    {
+        opacity:0;
+    }
+}

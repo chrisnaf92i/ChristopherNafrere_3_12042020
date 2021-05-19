@@ -17,6 +17,14 @@ body {
     margin-top: 0;
   }
 }
+@keyframes bars-spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -187,19 +195,6 @@ footer p {
 .all-restaurant__list-resto__restaurant__description p {
   margin: 5px;
 }
-.all-restaurant__list-resto__restaurant__description .rate {
-  position: absolute;
-  right: 15px;
-}
-.all-restaurant__list-resto__restaurant__description .rate:hover > .fill {
-  opacity: 1;
-}
-.all-restaurant__list-resto__restaurant__description .rate .fill {
-  position: absolute;
-  color: #9356DC;
-  opacity: 0;
-  transition: 500ms;
-}
 @media (max-width: 425px) {
   .all-restaurant__list-resto {
     display: block;
@@ -207,6 +202,29 @@ footer p {
   .all-restaurant__list-resto img {
     height: 200px;
   }
+}
+
+.rate {
+  position: absolute;
+  right: 15px;
+}
+.rate:hover > .fill {
+  opacity: 1;
+}
+.rate:hover > .line {
+  opacity: 0;
+}
+.rate .fill {
+  position: absolute;
+  font-size: 25px;
+  color: #9356DC;
+  opacity: 0;
+  transition: 500ms;
+}
+.rate .line {
+  font-size: 25px;
+  opacity: 1;
+  transition: 500ms;
 }
 
 .image-resto {
@@ -312,10 +330,20 @@ footer p {
   align-items: flex-end;
   white-space: nowrap;
   overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+}
+.carte-restaurant__plat__menu__description {
+  width: 90%;
+  border: 1px solid black;
   text-overflow: ellipsis;
 }
 .carte-restaurant__plat__menu .prix {
+  width: 10%;
   font-weight: bold;
+  position: absolute;
+  right: 0;
 }
 .carte-restaurant__plat__menu__description {
   text-align: left;
@@ -333,7 +361,7 @@ footer p {
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
-  width: 60px;
+  width: 20%;
   height: 80px;
   transition: all 500ms;
   transform: translateX(0);
@@ -355,6 +383,62 @@ footer p {
   .carte-restaurant__plat {
     width: 100%;
   }
+}
+
+.container-spinner {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #9356DC;
+  border-radius: 25px;
+}
+.container-spinner__bar {
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  background-color: #99E2D0;
+  transform-origin: -10px 5px;
+  animation: bars-spinner 1s infinite ease-in-out alternate;
+}
+.container-spinner__bar--0 {
+  transform: rotate(0deg) scaleX(1);
+  animation-delay: 0ms;
+}
+.container-spinner__bar--1 {
+  transform: rotate(45deg) scaleX(1);
+  animation-delay: 200ms;
+}
+.container-spinner__bar--2 {
+  transform: rotate(90deg) scaleX(1);
+  animation-delay: 400ms;
+}
+.container-spinner__bar--3 {
+  transform: rotate(135deg) scaleX(1);
+  animation-delay: 600ms;
+}
+.container-spinner__bar--4 {
+  transform: rotate(180deg) scaleX(1);
+  animation-delay: 800ms;
+}
+.container-spinner__bar--5 {
+  transform: rotate(225deg) scaleX(1);
+  animation-delay: 1000ms;
+}
+.container-spinner__bar--6 {
+  transform: rotate(270deg) scaleX(1);
+  animation-delay: 1200ms;
+}
+.container-spinner__bar--7 {
+  transform: rotate(315deg) scaleX(1);
+  animation-delay: 1400ms;
 }
 
 /*# sourceMappingURL=style.css.map */

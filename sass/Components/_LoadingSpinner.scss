@@ -1,0 +1,43 @@
+.container-spinner
+{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 150px;
+    height:150px;
+    
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+
+    border:1px solid black;
+    background-color:$color-primary;
+    border-radius: 25px;
+    
+
+    &__bar
+    {
+        position:absolute;
+
+        width: 25px;
+        height:5px;
+        margin:5px;
+
+        border:1px solid black;
+
+        background-color: $color-terciar;
+        transform-origin: -10px 5px;
+
+        animation: bars-spinner 1s infinite ease-in-out alternate;
+
+        @for $i from 0 through 7
+        {
+            &--#{$i}
+            {
+                transform:rotate(45deg*$i) scaleX(1);
+                animation-delay:200ms * $i;
+            }
+        }
+    }
+}
