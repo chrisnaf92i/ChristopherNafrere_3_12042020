@@ -1,42 +1,42 @@
 .container-spinner
 {
+    z-index: 2;
     position: absolute;
-    top: 50vh;
-    left: 50vw;
-    width: 150px;
-    height:150px;
-    
-    display: flex;
-    justify-content: center;
-    align-items:center;
-
-
     border:1px solid black;
-    background-color:$color-primary;
-    border-radius: 25px;
     
+
+
+    background-color: $color-terciar;
+    border-radius: 25px;
+
+    left:calc(50vw - 75px);
+    top:calc(50vh - 75px);
+
+    width:150px;
+    height: 150px;
+
+    animation: disparition-total 1s forwards;
+    animation-delay: 2s;
+    pointer-events:none;
+
 
     &__bar
     {
         position:absolute;
-
-        width: 25px;
-        height:5px;
-        margin:5px;
-
-        border:1px solid black;
-
-        background-color: $color-terciar;
-        transform-origin: -10px 5px;
-
-        animation: bars-spinner 1s infinite ease-in-out alternate;
+        left:100px;
+        top:70px;
+        transform-origin: -25px 5px;
+        background-color: white;
+        width:40px;
+        height:15px;
+        animation: bars-spinner 1s infinite ease-in-out alternate ;
 
         @for $i from 0 through 7
         {
             &--#{$i}
             {
-                transform:rotate(45deg*$i) scaleX(1);
-                animation-delay:200ms * $i;
+                transform:rotateZ(45deg * $i);
+                animation-delay: 200ms * $i;
             }
         }
     }

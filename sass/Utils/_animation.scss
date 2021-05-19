@@ -22,3 +22,19 @@
         opacity:0;
     }
 }
+
+@keyframes disparition-total 
+{
+
+    0%
+    {
+        opacity: 1;
+    }
+
+
+    100%
+    {
+        opacity: 0;
+    }
+
+}
