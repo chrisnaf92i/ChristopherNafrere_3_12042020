@@ -85,22 +85,26 @@
         display:flex;
         margin-top:50px;
         margin-bottom:50px;
+        
     }
 
     &__command
     {
         @include S_button;
+        &:hover
+        {
+            background:$color-primary;
+        }
     }
 
     &__plat
     {
-        display:flex; 
-        align-items: flex-end;
+        display:flex;
         background-color: white;
 
         animation: apparition 1500ms ease-in-out;
 
-        width:80%;
+        width:100%;
         height: 75px;
         
         margin: 20px auto;
@@ -117,6 +121,7 @@
             & .check-box
             {
                 opacity: 1;
+                transform: translateX(0%);
                 & > .check-box__spinner
                 {
                     transform:rotate(360deg);
@@ -129,23 +134,31 @@
         {
             display:flex;
             align-items: flex-end;
-            white-space: nowrap;
             overflow: hidden;
             width:100%;
             text-overflow: ellipsis;
             position:relative;
             &__description
             {
-                width:90%;
-                border: 1px solid black;
-                text-overflow:ellipsis;
+                width:100%;
+                white-space: nowrap;
+
+                h3
+                {
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                }
+                p
+                {
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                }
 
             }
             .prix
             {
                 width:10%;
                 font-weight: bold;
-                position:absolute;
                 right:0;
             }
             &__description
@@ -177,7 +190,7 @@
             width:20%;
             height:80px;
             transition: all 500ms;
-            transform:translateX(0);
+            transform:translateX(100%);
             opacity: 0;
 
             .check-box__spinner

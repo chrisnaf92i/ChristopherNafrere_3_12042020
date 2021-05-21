@@ -35,8 +35,12 @@
 
     &__btn-explore
     {
-       @include S_button;
-       margin:24px auto;
+        @include S_button;
+        margin:24px auto;
+        &:hover
+        {
+            background:$color-primary;
+        }
     }
 }
 

@@ -104,6 +104,9 @@ footer p {
   margin: auto;
   margin: 24px auto;
 }
+.sec-location__btn-explore:hover {
+  background: #9356DC;
+}
 
 .fonctionnement__step {
   display: flex;
@@ -312,12 +315,14 @@ footer p {
   font-weight: bold;
   margin: auto;
 }
+.carte-restaurant__command:hover {
+  background: #9356DC;
+}
 .carte-restaurant__plat {
   display: flex;
-  align-items: flex-end;
   background-color: white;
   animation: apparition 1500ms ease-in-out;
-  width: 80%;
+  width: 100%;
   height: 75px;
   margin: 20px auto;
   overflow: hidden;
@@ -329,6 +334,7 @@ footer p {
 }
 .carte-restaurant__plat:hover .check-box {
   opacity: 1;
+  transform: translateX(0%);
 }
 .carte-restaurant__plat:hover .check-box > .check-box__spinner {
   transform: rotate(360deg);
@@ -336,21 +342,26 @@ footer p {
 .carte-restaurant__plat__menu {
   display: flex;
   align-items: flex-end;
-  white-space: nowrap;
   overflow: hidden;
   width: 100%;
   text-overflow: ellipsis;
   position: relative;
 }
 .carte-restaurant__plat__menu__description {
-  width: 90%;
-  border: 1px solid black;
+  width: 100%;
+  white-space: nowrap;
+}
+.carte-restaurant__plat__menu__description h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte-restaurant__plat__menu__description p {
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .carte-restaurant__plat__menu .prix {
   width: 10%;
   font-weight: bold;
-  position: absolute;
   right: 0;
 }
 .carte-restaurant__plat__menu__description {
@@ -372,7 +383,7 @@ footer p {
   width: 20%;
   height: 80px;
   transition: all 500ms;
-  transform: translateX(0);
+  transform: translateX(100%);
   opacity: 0;
 }
 .carte-restaurant__plat .check-box .check-box__spinner {
