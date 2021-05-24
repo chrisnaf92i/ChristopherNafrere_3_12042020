@@ -122,7 +122,7 @@
         {
             &> .carte-restaurant__plat__menu
             {
-                width:100%;
+                width:85%;
                 @media (max-width:425px) {
                     width: 80%;
                 }
@@ -151,6 +151,8 @@
             align-items: flex-end;
 
             width:100%;
+            
+            transition: all 500ms;
 
             &__description
             {

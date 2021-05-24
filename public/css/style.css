@@ -338,7 +338,7 @@ footer p {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
 }
 .carte-restaurant__plat:hover > .carte-restaurant__plat__menu {
-  width: 100%;
+  width: 85%;
 }
 @media (max-width: 425px) {
   .carte-restaurant__plat:hover > .carte-restaurant__plat__menu {
@@ -360,6 +360,7 @@ footer p {
   display: flex;
   align-items: flex-end;
   width: 100%;
+  transition: all 500ms;
 }
 .carte-restaurant__plat__menu__description {
   white-space: nowrap;
