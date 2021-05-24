@@ -38,7 +38,14 @@
             width:95%;
             background-color: white;
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
-    
+            @media (max-width:768px)
+            {
+                img
+                {
+                    height: 330px;
+                }
+
+            }
             a
             {
                 color:black;
@@ -72,6 +79,7 @@
                 height: 200px;
             }
         }
+
     }
 }
 .rate

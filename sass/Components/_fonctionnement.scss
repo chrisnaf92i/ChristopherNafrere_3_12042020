@@ -7,6 +7,7 @@
 
     &__explain
     {
+
         display: flex;
         align-items: center;
         position: relative;
@@ -22,7 +23,11 @@
         box-shadow: 1px 1px 5px black;
         
         border-radius: 25px;
-
+        @media (max-width:768px)
+        {
+            padding:0px;
+            padding-left:10px;
+        }
         .fas
         {
             margin:15px;
@@ -62,4 +67,5 @@
             padding: 15px;
         }
     }
+
 }
