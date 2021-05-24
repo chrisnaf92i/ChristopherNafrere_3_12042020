@@ -67,6 +67,10 @@ footer p {
   color: white;
   line-height: 2;
 }
+footer a {
+  color: white;
+  text-decoration: none;
+}
 
 .sec-location {
   width: 50%;
@@ -106,10 +110,12 @@ footer p {
   color: white;
   font-weight: bold;
   margin: auto;
+  box-shadow: 1px 1px 10px #575757;
   margin: 24px auto;
 }
 .sec-location__btn-explore:hover {
   background: #9356DC;
+  box-shadow: 1px 1px 5px black;
 }
 
 .fonctionnement__step {
@@ -292,7 +298,7 @@ footer p {
   border-radius: 45px 45px 0 0;
   padding: 15px;
   width: 50%;
-  margin-top: -80%;
+  margin-top: -90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -329,9 +335,13 @@ footer p {
   color: white;
   font-weight: bold;
   margin: auto;
+  box-shadow: 1px 1px 10px #575757;
 }
 .carte-restaurant__command:hover {
   background: #9356DC;
+}
+.carte-restaurant__command:hover:hover {
+  background: linear-gradient(#fface8, #ae80e5);
 }
 .carte-restaurant__plat {
   display: flex;
@@ -502,6 +512,20 @@ footer p {
 .container-spinner__bar--7 {
   transform: rotateZ(315deg);
   animation-delay: 1400ms;
+}
+
+.voiles {
+  z-index: 2;
+  position: absolute;
+  width: 97%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.65);
+  animation: disparition-total 3s forwards;
+}
+@media (max-width: 768px) {
+  .voiles {
+    height: 325%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

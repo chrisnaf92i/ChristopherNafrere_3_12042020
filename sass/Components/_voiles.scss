@@ -1,0 +1,15 @@
+.voiles
+{
+    z-index: 2;
+    position:absolute;
+    width: 97%;
+    height:100% * 2;
+    background-color: rgba(0, 0, 0, 0.65);
+    animation:disparition-total  3s forwards;
+
+    @media (max-width:768px)
+    {
+        height:100% * 3.25;
+
+    }
+}
