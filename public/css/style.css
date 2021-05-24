@@ -338,12 +338,15 @@ footer p {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
 }
 .carte-restaurant__plat:hover > .carte-restaurant__plat__menu {
-  width: 750px;
+  width: 100%;
 }
 @media (max-width: 425px) {
   .carte-restaurant__plat:hover > .carte-restaurant__plat__menu {
-    width: 260px;
+    width: 80%;
   }
+}
+.carte-restaurant__plat:hover > .carte-restaurant__plat__menu__description {
+  background-color: blue;
 }
 .carte-restaurant__plat:hover .check-box {
   opacity: 1;
@@ -356,11 +359,11 @@ footer p {
   position: relative;
   display: flex;
   align-items: flex-end;
-  transition: width 500ms;
+  width: 100%;
 }
 .carte-restaurant__plat__menu__description {
   white-space: nowrap;
-  width: 800px;
+  width: 90%;
 }
 .carte-restaurant__plat__menu__description h3 {
   overflow: hidden;
@@ -372,7 +375,7 @@ footer p {
 }
 @media (max-width: 425px) {
   .carte-restaurant__plat__menu__description {
-    width: 280px;
+    width: 90%;
   }
 }
 .carte-restaurant__plat__menu .prix {

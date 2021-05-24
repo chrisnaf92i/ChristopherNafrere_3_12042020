@@ -122,9 +122,13 @@
         {
             &> .carte-restaurant__plat__menu
             {
-                width:750px;
+                width:100%;
                 @media (max-width:425px) {
-                    width: 260px;
+                    width: 80%;
+                }
+                &__description
+                {
+                    background-color: blue;
                 }
             }
             & .check-box
@@ -146,11 +150,12 @@
             display:flex;
             align-items: flex-end;
 
-            transition: width 500ms;
+            width:100%;
+
             &__description
             {
                 white-space: nowrap;
-                width: 800px;
+                width: 90%;
                 h3
                 {
                     overflow: hidden;
@@ -163,7 +168,7 @@
                 }
                 @media (max-width:425px) 
                 {
-                    width:280px;    
+                    width:90%;    
                 }
             }
             .prix
