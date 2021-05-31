@@ -521,6 +521,7 @@ footer a {
   height: 200%;
   background-color: rgba(0, 0, 0, 0.65);
   animation: disparition-total 3s forwards;
+  pointer-events: none;
 }
 @media (max-width: 768px) {
   .voiles {
